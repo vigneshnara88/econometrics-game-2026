@@ -6,6 +6,24 @@ Two rounds of applied causal analysis: heterogeneous effects of performance-base
 
 This was collaborative competition work. The code and analysis are presented as team project materials, without assigning sole authorship.
 
+## What connects the two rounds?
+
+Both rounds ask how an intervention changes behaviour, but the available sources of identification are different. The preliminary round starts with randomised programme offers and asks whether the response varies with students' starting points. The final round starts with a nationwide policy shock and asks whether places with different prior exposure subsequently diverged. The project illustrates how an empirical strategy has to follow the assignment mechanism and the available data.
+
+### Financial incentives and heterogeneous responses
+
+An average programme effect can hide differences between students. Financial incentives might change GPA differently for students with different baseline achievement, which matters for understanding whom a programme reaches and how it could be targeted. The preliminary analysis studies these differences within the STAR financial-incentive programme.
+
+The code distinguishes the effect of being offered a programme from the effect of participating in it. An intent-to-treat regression measures the former. When take-up is incomplete, an instrumental-variable analysis uses the randomised offer to isolate variation in participation induced by that offer. Interactions and subgroup linear combinations then examine how these estimates differ across baseline achievement groups. Interpreting those participation effects requires the additional assumptions of the instrumental-variable design; randomisation of an offer does not make actual participation random.
+
+### OxyContin reformulation and fertility
+
+The final round asks whether a change in the opioid environment was followed by changes in fertility, and whether the pattern differed across age groups. The motivating question extends beyond a direct drug-market outcome: a health and substance-use shock may also be connected with decisions and circumstances around family formation. Fertility counts alone cannot establish which mechanisms are responsible.
+
+Because the 2010 reformulation was national, the design does not use an entirely untreated set of states. Instead, it compares changes in states with greater and smaller baseline exposure. The continuous-exposure difference-in-differences coefficient asks whether fertility changed more with each additional unit of pre-reformulation exposure. State effects absorb stable differences between states, while year effects absorb common national changes. Event studies examine the timing of that relationship; sensitivity specifications ask how dependent it is on controls, weighting, exposure definitions and assumptions about trends.
+
+The data work is central to that comparison. Birth counts need population denominators before they can be compared across states or ages, and the available inputs require proxy denominators. The repository therefore documents how panels and outcomes are constructed as well as how regressions are fitted.
+
 ## Research questions and methods
 
 | Round | Question | Implementation |
